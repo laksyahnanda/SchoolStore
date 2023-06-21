@@ -1,2 +1,0 @@
-# SchoolStore
-Inmakes Challenge
