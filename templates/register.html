@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <center>
+    <h1>Register</h1>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="password">Confirm Password:</label>
+        <input type="password" id="cpassword" name="password" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        <img src="{% static 'img/register.png' %}" alt="logimage" style="height:220px; width:100% ">
+    </center>
+{% endblock %}
